@@ -1,15 +1,6 @@
-Lieliski! Izstrādāsim projektu, kas būs saistīts ar fiziskām aktivitātēm un veselības analīzi. Šī lietotne varētu ļaut lietotājiem ievadīt savu fizisko aktivitāšu datus (piemēram, soļus, distanci, laiku, kalorijas), sekot līdzi veselības rādītājiem (piemēram, svaram, asinsspiedienam), kā arī analizēt šo datus ar vizualizācijām un filtru palīdzību.
-
-Šajā projektā izmantosim Flask Web lietotni, Peewee ORM datubāzei un matplotlib/plotly grafiku vizualizācijām. Šeit ir soli pa solim, kā varētu veidot šo lietotni.
-
-1. Instalējam nepieciešamās atkarības
-Pirmkārt, jums būs jāinstalē šīs atkarības:
-
 bash
 Copy
 pip install Flask peewee matplotlib pandas plotly
-2. Projektu struktūra
-Lai ērti strādātu, izveidosim šādu projektu struktūru:
 
 csharp
 Copy
@@ -26,8 +17,6 @@ fitness_project/
 │   └── style.css
 ├── uploads/            # CSV faili
 └── requirements.txt    # Atkarību fails
-3. Flask lietotne (app.py)
-Flask lietotnes galvenā loģika.
 
 python
 Copy
@@ -97,8 +86,6 @@ def upload_file():
 
 if __name__ == '__main__':
     app.run(debug=True)
-4. Datubāze un modeļi (models.py)
-Izmantojam Peewee ORM, lai izveidotu divas tabulas – aktivitātēm un veselībai.
 
 python
 Copy
@@ -127,7 +114,7 @@ def create_db():
     if not os.path.exists('fitness_data.db'):
         db.connect()
         db.create_tables([Activity, Health])
-5. HTML šabloni (templates)
+
 index.html
 Pamatsākuma lapa:
 
@@ -290,7 +277,6 @@ Copy
 python app.py
 Lietotne būs pieejama vietējā serverī (http://127.0.0.1:5000/), kur lietotāji varēs apskatīt datus, augšupielādēt CSV failus, skatīt grafikus un veikt citas darbības.
 
-Šī ir pamata struktūra, un jūs varat to paplašināt ar dažādiem datu analīzes un vizualizācijas elementiem, kā arī papildu funkcijām. Ja ir kādi jautājumi vai nepieciešama papildu palīdzība, droši jautājiet!
 
 
 
