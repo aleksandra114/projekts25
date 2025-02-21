@@ -2,6 +2,6 @@
 Programēšanas projekta darbs 2025
 tēma fiziskas aktivitātes un veselības analīzes lietotne
 Darba pienākumi 
-Ance:
-Nikola:
-Aleksandra:
+Ance: Veidos datu bāzi
+Nikola: Veidos datu vizualizācijas
+Aleksandra: veidos lietotāja darbības
