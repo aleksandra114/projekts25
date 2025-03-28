@@ -7,35 +7,41 @@
 
 ## Projekta sadalījums
 
-### **Ance**: Datu bāzes izveide
+### **Ance**: 
 - **Uzdevumi**:
-  - Izveidot datubāzi, kas glabās aktivitātes un veselības datus.
-  - Definēt datu struktūru (tabulas un to laukus), piemēram, datums, soļi, kalorijas, svars un asinsspiediens.
+  - Izveidot datubāzi, kas glabās veselības datus.
+  - Definēt datu struktūru (tabulas un to laukus), piemēram, kalorijas, miegs, svars un asinsspiediens.
   - Nodrošināt datu ievades un saglabāšanas funkcionalitāti.
   - Izveidot datu validāciju, lai pārliecinātos, ka ievadītie dati ir pareizi.
+  - Pievienot funkcionalitāti, lai lietotāji varētu augšupielādēt **CSV** failus, kas satur datus, un apskatīt tos lietotnes vidē.
+  - Noformēt tabulu un grafikus.
 - **Tehnoloģijas**:
   - **Peewee** – Python ORM datubāzes pārvaldībai (SQLite).
   - **SQLite** – Datubāze.
 
-### **Nikola**: Datu vizualizācijas izveide
+### **Nikola**:
 - **Uzdevumi**:
+  - Izveidot datubāzi, kas glabās aktivitātes
   - Izveidot vizualizācijas par fiziskajām aktivitātēm (piemēram, grafikus par soļiem un kalorijām laika gaitā).
   - Izmantot **matplotlib** un **plotly**, lai attēlotu datus kā līniju grafikus, stabiņu diagrammas u.c.
   - Veidot interaktīvas vizualizācijas (piemēram, pogas vai datu izvēles iespējas), lai lietotājs varētu mainīt grafiku parametrus.
 - **Tehnoloģijas**:
   - **Matplotlib** un **Plotly** – Python bibliotēkas datu vizualizācijai.
+  - **Peewee** – Python ORM datubāzes pārvaldībai (SQLite).
+  - **SQLite** – Datubāze.
 
-### **Aleksandra**: Lietotāja darbības un vizualizāciju uzlabošana
+### **Aleksandra**: 
 - **Uzdevumi**:
   - Izstrādāt lietotāja saskarni, kas ļaus lietotājiem viegli piekļūt datiem un vizualizācijām.
   - Veidot skaistu un intuitīvu vizualizāciju, izmantojot **HTML**, **CSS** un **JavaScript**.
   - Nodrošināt, lai lietotāja saskarne būtu ērti lietojama un vizuāli pievilcīga.
-  - Pievienot funkcionalitāti, lai lietotāji varētu augšupielādēt **CSV** failus, kas satur datus, un apskatīt tos lietotnes vidē.
+  - Izveidot galveno datubazi.
 - **Tehnoloģijas**:
   - **Flask** – Web lietotnes izstrādei.
   - **HTML**, **CSS**, **JavaScript** – Lietotāja saskarnei.
   - **Bootstrap** – Lai uzlabotu vizuālo noformējumu (pēc vajadzības).
 
 https://replit.com/@aleksandramiha3/Aktiviate
+https://www.youtube.com/watch?v=B2FbM8yTXtQ
 
 
