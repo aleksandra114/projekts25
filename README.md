@@ -36,6 +36,6 @@
   - **HTML**, **CSS**, **JavaScript** – Lietotāja saskarnei.
   - **Bootstrap** – Lai uzlabotu vizuālo noformējumu (pēc vajadzības).
 
-
+https://replit.com/@aleksandramiha3/Aktiviate
 
 
