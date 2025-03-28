@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="alert alert-info">
+                <h4>📊 Jūsu aktivitāšu pārskats</h4>
+                <p>Šeit varat redzēt savu treniņu statistiku un progresu laika gaitā.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-2">🔥 Kaloriju sadedzināšana pa aktivitātēm</h3>
+                    <p class="text-muted text-center mb-4">Parāda kopējo kaloriju daudzumu, kas sadedzināts katrā aktivitātes veidā</p>
+                    <div id="caloriesChart" style="height: 400px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-2">📏 Paveiktais attālums</h3>
+                    <p class="text-muted text-center mb-4">Attēlo Jūsu noskrieto/noieto attālumu pa dienām</p>
+                    <div id="distanceChart" style="height: 350px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-2">❤️ Treniņu intensitāte</h3>
+                    <p class="text-muted text-center mb-4">Parāda, cik intensīvi ir bijuši Jūsu treniņi, balstoties uz sirdsdarbību</p>
+                    <div id="heartRateChart" style="height: 350px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    {% if plots %}
+        const caloriesData = {{ plots.calories|safe }};
+        const distanceData = {{ plots.distance|safe }};
+        const heartRateData = {{ plots.heart_rate|safe }};
+
+        if (caloriesData) Plotly.newPlot('caloriesChart', caloriesData.data, caloriesData.layout);
+        if (distanceData) Plotly.newPlot('distanceChart', distanceData.data, distanceData.layout);
+        if (heartRateData) Plotly.newPlot('heartRateChart', heartRateData.data, heartRateData.layout);
+    {% else %}
+        document.querySelectorAll('.card-body').forEach(card => {
+            card.innerHTML += '<p class="text-center text-muted">Nav pieejamu datu grafika attēlošanai</p>';
+        });
+    {% endif %}
+</script>
+
+{% endblock %}

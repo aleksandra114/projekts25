@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1>Laipni lūdzam Veselības un fitnesa izsekotājā</h1>
+    <p class="lead">Izsekojiet savām aktivitātēm, pārraugiet savus veselības rādītājus un vizualizējiet savu progresu.</p>
+    <hr class="my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Izsekot aktivitātēm</h3>
+            <p>Reģistrējiet savus treniņus, skrējienus, pastaigas un citas aktivitātes.</p>
+            <a class="btn btn-primary" href="/activities">Aktivitātes ierakstīšana</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Veselības metrika</h3>
+            <p>Pārraugiet savas dzīvības pazīmes un veselības rādītājus.</p>
+            <a class="btn btn-primary" href="/health">Reģistrējieties veselības dati</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Analīze</h3>
+            <p>Skatiet savu datu detalizētu analīzi un tendences.</p>
+            <a class="btn btn-primary" href="/analytics">Skaties analīzi</a>
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+    <h2 class="mb-4">Populārākās sporta aktivitātes</h2>
+    <div class="col-md-3">
+        <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=500&q=80" class="card-img-top" alt="Skriešana">
+            <div class="card-body">
+                <h3 class="card-title">🏃 Skriešana</h3>
+                <p class="card-text">
+                    - Uzlabo sirds veselību<br>
+                    - Stiprina muskuļus<br>
+                    - Sadedzina kalorijas<br>
+                    - Ieteicams: 30-60 min
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=500&q=80" class="card-img-top" alt="Riteņbraukšana">
+            <div class="card-body">
+                <h3 class="card-title">🚴 Riteņbraukšana</h3>
+                <p class="card-text">
+                    - Zema ietekme uz locītavām<br>
+                    - Uzlabo izturību<br>
+                    - Stiprina kāju muskuļus<br>
+                    - Ieteicams: 45-90 min
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=500&q=80" class="card-img-top" alt="Peldēšana">
+            <div class="card-body">
+                <h3 class="card-title">🏊 Peldēšana</h3>
+                <p class="card-text">
+                    - Pilna ķermeņa treniņš<br>
+                    - Uzlabo elpošanu<br>
+                    - Mazina stresu<br>
+                    - Ieteicams: 30-45 min
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1538438253612-287c9fc9217e?w=500&q=80" class="card-img-top" alt="Pastaigas">
+            <div class="card-body">
+                <h3 class="card-title">🚶 Pastaigas</h3>
+                <p class="card-text">
+                    - Piemērots visiem<br>
+                    - Uzlabo garastāvokli<br>
+                    - Palīdz atjaunoties<br>
+                    - Ieteicams: 30+ min
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card text-center mt-4">
+    <div class="card-header">
+        Sāciet izsekot savām aktivitātēm
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Reģistrējiet savas aktivitātes</h5>
+        <p class="card-text">Pievienojiet savus treniņus, skrējienus un citus veselības rādītājus, lai sekotu savam progresam.</p>
+        <a href="/activities" class="btn btn-primary">Sākt izsekot</a>
+    </div>
+</div>
+{% endblock %}

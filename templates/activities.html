@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Aktivitātes izsekotājs</h2>
+<div class="row">
+    <div class="col-md-6">
+        <form method="POST">
+            <div class="mb-3">
+                <label class="form-label">Darbības veids</label>
+                <select name="type" class="form-control" required>
+                    <option value="skriešana">🏃 Skriešana</option>
+                    <option value="iešana">🚶 Iešana</option>
+                    <option value="riteņbraukšana">🚴 Riteņbraukšana</option>
+                    <option value="peldēšana">🏊 Peldēšana</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Ilgums (minūtes)</label>
+                <input type="number" name="duration" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sadedzinātās kalorijas</label>
+                <input type="number" name="calories" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Attālums (km)</label>
+                <input type="number" step="0.01" name="distance" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sirdsdarbības ātrums (sitieni minūtē)</label>
+                <input type="number" name="heart_rate" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Pievienot darbību</button>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <h3>Pēdējās aktivitātes</h3>
+        <div class="card-deck">
+            {% for activity in activities %}
+            <div class="card" style="transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <div class="card-body">
+                    <h5 class="card-title">
+                   <h5 class="card-title">
+    {% if activity.Veids == 'running' %}
+        🏃 Skriešana
+    {% elif activity.Veids == 'walking' %}
+        🚶 Iešana
+    {% elif activity.Veids == 'cycling' %}
+        🚴 Riteņbraukšana
+    {% elif activity.Veids == 'swimming' %}
+        🏊 Peldēšana
+    {% else %}
+        {{ activity.Veids }}
+    {% endif %}
+</h5>
+                </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ activity.Dati.strftime('%Y-%m-%d %H:%M') }}</h6>
+                    <p class="card-text">
+                        Ilgums: {{ activity.Ilgums }} minūtes<br>
+                        Sadedzinātās kalorijas: {{ activity.Kalorijas }} kcal<br>
+                        Attālums: {{ activity.Attalums }} kilometri<br>
+                        Sirdsdarbība: {{ activity.Sirddarbiba }} sitieni/min
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

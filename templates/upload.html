@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Augšupielādējiet darbības datus</h2>
+<div class="row">
+    <div class="col-md-6">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label">Augšupielādējiet CSV failu</label>
+                <input type="file" name="file" class="form-control" accept=".csv" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Augšupielādēt datus</button>
+        </form>
+        <div class="mt-4">
+            <h4>CSV formāta prasības:</h4>
+            <p>Jūsu CSV failā ir jābūt šādām kolonnām</p>
+            <ul>
+                <li>tips (virkne): darbības veids</li>
+                <li>ilgums (vesels skaitlis): ilgums minūtēs</li>
+                <li>kalorijas (vesels skaitlis): sadedzinātās kalorijas</li>
+                <li>distance (pludiņš): attālums kilometros</li>
+                <li>sirdsdarbības ātrums (vesels skaitlis): vidējais sirdsdarbības ātrums</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
