@@ -42,6 +42,6 @@
   - **Bootstrap** – Lai uzlabotu vizuālo noformējumu (pēc vajadzības).
 
 https://replit.com/@aleksandramiha3/Aktiviate
-https://www.youtube.com/watch?v=B2FbM8yTXtQ
 
+https://youtu.be/9hV3t6b2REo?si=SmzpckSRbdnAFg9I
 
